@@ -6,7 +6,7 @@ set(CMX_IOC "${CMAKE_CURRENT_LIST_DIR}/gombos.ioc")
 # set(CMX_DEBUGGER "openocd")
 # set(OPENOCD_CFG "${CMAKE_CURRENT_SOURCE_DIR}/openocd.cfg")
 
-include(cmake/cubemx.cmake)
+include(cubemx.cmake/cmake/cubemx.cmake)
 
 project(${CMX_PROJ})
 add_executable(${CMX_PROJ})
