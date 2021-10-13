@@ -21,8 +21,11 @@ file(GLOB_RECURSE MIDDLEWARE_SRC
     "USB_HOST/*.c"
     "Middlewares/*.c"
 )
+file(GLOB_RECURSE USER_SRC
+    "Src/ring_buffer.c"
+)
 
-target_sources(${CMX_PROJ} PRIVATE ${MIDDLEWARE_SRC})
+target_sources(${CMX_PROJ} PRIVATE ${MIDDLEWARE_SRC} ${USER_SRC})
 cubemx_target(${CMX_PROJ})
 target_compile_options(${CMX_PROJ} PRIVATE -Og -Wall -g -gdwarf-2)
 
